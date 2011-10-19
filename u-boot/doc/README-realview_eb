@@ -1,0 +1,44 @@
+
+		U-Boot for ARM RealView Development Platforms
+
+		Peter Pearse, ARM Ltd.
+		peter.pearse@arm.com
+		www.arm.com
+
+Manuals may be available from :-
+http://www.arm.com/documentation/Boards_and_Firmware/index.html
+
+Overview :
+--------
+The RealView Emulation Baseboard can be fitted with one or two
+Core Tiles (CTs). One of the CTs fitted will emulate a particular
+ARM core.
+
+As at 2006/09/07, these include:-
+	ARM7TDMI
+	ARM926EJ-S
+	ARM1136JF-S
+	ARM11 MPCore 
+
+
+Boot Methods :
+------------
+RealView boards may be configured to boot in various ways as described in the User Guide.
+As at 2006/09/07, U-Boot assumes that the board will have been reset to have 
+RAM mapped at 0x00000000 i.e. that the ARM Boot Monitor will have been run.
+For configurations where this is not the case the existing U-Boot code must be modified
+to reset the board state correctly.
+See the RealView EB User Guide and the ARM PrimeCell System Controller (SP810) TRM
+sipplied with the product.
+
+Configuring U-Boot :
+------------------
+The makefile contains one target for the REalView EB, realview_eb_config.
+The U-Boot built to this configuration can be used with any CT.
+
+Board Revision Info
+------------------
+U-Boot extracts the following values into the Revision field
+of /proc/cpuinfo:-
+	SYS_ID  @ 0x10000000
+See the board User Guide for details of the fields values.

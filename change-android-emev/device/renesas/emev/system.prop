@@ -1,0 +1,5 @@
+ro.config.sync = yes
+ro.sf.lcd_density = 240
+ro.simulated.phone=true
+keyguard.no_require_sim=1
+debug.sf.hw=0

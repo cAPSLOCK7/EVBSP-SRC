@@ -1,0 +1,44 @@
+
+		U-Boot for ARM Versatile Development Platforms
+
+		Peter Pearse, ARM Ltd.
+		peter.pearse@arm.com
+		www.arm.com
+
+Manuals may be available from :-
+http://www.arm.com/documentation/Boards_and_Firmware/index.html
+
+Overview :
+--------
+There are two Versatile variants:-
+	The Versatile Application Baseboard for ARM926EJ-S (Versatile AB926-EJS)
+	The Versatile Platform    Baseboard for ARM926EJ-S (Versatile PB926-EJS)
+Both are fitted with an ARM926-EJS Development Chip.
+
+Boot Methods :
+------------
+Versatile boards may be configured to boot in various ways as described in the User Guide.
+As at 2006/09/07, U-Boot assumes that the board will have been reset to have 
+RAM mapped at 0x00000000 i.e. that the ARM Boot Monitor will have been run.
+For configurations where this is not the case the existing U-Boot code must be modified
+to reset the board state correctly.
+See section "Removing boot remapping and enabling SDRAM at 0x0" in the User Guide.
+
+Configuring U-Boot :
+------------------
+The makefile contains targets for Versatile platforms of both types.
+	versatileab_config
+	versatilepb_config
+	versatile_config
+
+Note that versatile_config is the original target.
+It has been retained for backward compatibility and is identical to
+versatilepb_config. 
+
+Board Revision Info
+------------------
+U-Boot extracts the following values into the Revision field
+of /proc/cpuinfo:-
+Versatile/AB :	 SYS_ID  @ 0x10000000
+Versatile/PB :	 SYS_ID  @ 0x10000000       
+See the board User Guide for details of the fields values.

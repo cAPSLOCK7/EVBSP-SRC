@@ -1,0 +1,394 @@
+/*
+ *
+ * (C) Copyright 2007, 2008
+ * NEC Electronics Corporation.
+ *
+ * See file CREDITS for list of people who contributed to this
+ * project.
+ *
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License as
+ * published by the Free Software Foundation; either version 2 of
+ * the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 59 Temple Place, Suite 330, Boston,
+ * MA 02111-1307 USA
+ */
+
+#ifndef _REG_H
+#define _REG_H
+
+/* ASMU */
+#define	ASMU_S0_BASE			(0xc0110000)
+
+#define	ASMU_RESETREQ0			(ASMU_S0_BASE + 0x004)
+#define	ASMU_RESETREQ0ENA		(ASMU_S0_BASE + 0x008)
+#define	ASMU_RESETREQ1			(ASMU_S0_BASE + 0x00c)
+#define	ASMU_RESETREQ1ENA		(ASMU_S0_BASE + 0x010)
+#define	ASMU_RESETREQ2			(ASMU_S0_BASE + 0x018)
+#define	ASMU_RESETREQ2ENA		(ASMU_S0_BASE + 0x01c)
+#define	ASMU_AUTO_MODE_EN		(ASMU_S0_BASE + 0x07c)
+#define	ASMU_CLK_MODE_SEL		(ASMU_S0_BASE + 0x080)
+#define	ASMU_PLL1CTRL0			(ASMU_S0_BASE + 0x084)
+#define	ASMU_PLL1CTRL1			(ASMU_S0_BASE + 0x088)
+#define	ASMU_PLL2CTRL0			(ASMU_S0_BASE + 0x08c)
+#define	ASMU_PLL2CTRL1			(ASMU_S0_BASE + 0x090)
+#define	ASMU_PLL3CTRL0			(ASMU_S0_BASE + 0x094)
+#define	ASMU_PLL3CTRL1			(ASMU_S0_BASE + 0x098)
+#define	ASMU_PLLLOCKTIME		(ASMU_S0_BASE + 0x09c)
+#define	ASMU_PLLVDDWAIT			(ASMU_S0_BASE + 0x0b4)
+#define	ASMU_PWRCNT				(ASMU_S0_BASE + 0x0c0)
+
+#define	ASMU_NORMALA_DIV		(ASMU_S0_BASE + 0x0f0)
+#define	ASMU_NORMALB_DIV		(ASMU_S0_BASE + 0x0f4)
+#define	ASMU_NORMALC_DIV		(ASMU_S0_BASE + 0x0f8)
+#define	ASMU_NORMALD_DIV		(ASMU_S0_BASE + 0x0fc)
+#define	ASMU_ECONOMY_DIV		(ASMU_S0_BASE + 0x100)
+#define	ASMU_STANDBY_DIV		(ASMU_S0_BASE + 0x104)
+#define	ASMU_POWERON_DIV		(ASMU_S0_BASE + 0x108)
+
+#define	ASMU_DIVSP0SCLK			(ASMU_S0_BASE + 0x118)
+#define	ASMU_DIVMEMCRCLK		(ASMU_S0_BASE + 0x128)
+#define	ASMU_DIVLCDLCLK			(ASMU_S0_BASE + 0x130)
+#define	ASMU_DIVIICSCLK			(ASMU_S0_BASE + 0x134)
+#define	ASMU_TI0TIN_SEL			(ASMU_S0_BASE + 0x138)
+#define	ASMU_DIVTIMTIN			(ASMU_S0_BASE + 0x14c)
+#define	ASMU_DIVU70SCLK			(ASMU_S0_BASE + 0x158)
+#define	ASMU_DIVU71SCLK			(ASMU_S0_BASE + 0x15c)
+#define	ASMU_DIVU72SCLK			(ASMU_S0_BASE + 0x160)
+
+#define	ASMU_AHBCLKCTRL0		(ASMU_S0_BASE + 0x1A0)
+#define	ASMU_AHBCLKCTRL1		(ASMU_S0_BASE + 0x1A4)
+#define	ASMU_APBCLKCTRL0		(ASMU_S0_BASE + 0x1A8)
+#define	ASMU_APBCLKCTRL1		(ASMU_S0_BASE + 0x1Ac)
+#define	ASMU_CLKCTRL			(ASMU_S0_BASE + 0x1b0)
+#define	ASMU_GCLKCTRL0			(ASMU_S0_BASE + 0x1b4)
+#define	ASMU_GCLKCTRL0ENA		(ASMU_S0_BASE + 0x1b8)
+#define	ASMU_GCLKCTRL1			(ASMU_S0_BASE + 0x1bc)
+#define	ASMU_GCLKCTRL1ENA		(ASMU_S0_BASE + 0x1c0)
+#define	ASMU_GCLKCTRL2			(ASMU_S0_BASE + 0x1c4)
+#define	ASMU_GCLKCTRL2ENA		(ASMU_S0_BASE + 0x1c8)
+#define	ASMU_GCLKCTRL3			(ASMU_S0_BASE + 0x1cc)
+#define	ASMU_GCLKCTRL3ENA		(ASMU_S0_BASE + 0x1d0)
+
+#define	ASMU_AUTO_FRQ_CHANGE		(ASMU_S0_BASE + 0x1dc)
+#define	ASMU_AUTO_FRQ_MASK0		(ASMU_S0_BASE + 0x1e0)
+#define	ASMU_AUTO_FRQ_MASK1		(ASMU_S0_BASE + 0x1e4)
+#define	ASMU_DFS_HALFMODE		(ASMU_S0_BASE + 0x1e8)
+#define	ASMU_FLA_CLK_DLY		(ASMU_S0_BASE + 0x1f0)
+#define	ASMU_MEMCCLK270_SEL		(ASMU_S0_BASE + 0x1fc)
+
+#define	ASMU_QR_ENA			(ASMU_S0_BASE + 0x220)
+#define	ASMU_QR_CLKDIV			(ASMU_S0_BASE + 0x224)
+
+#define	ASMU_POWERSW_ENA		(ASMU_S0_BASE + 0x240)
+
+#define	ASMU_POWERSW_ACTRL_EN		(ASMU_S0_BASE + 0x25c)
+#define	ASMU_LOG1SW_ACTRL		(ASMU_S0_BASE + 0x260)
+#define	ASMU_ADSPSW_ACTRL		(ASMU_S0_BASE + 0x264)
+
+#define	ASMU_AB1_U70WAITCTRL		(ASMU_S0_BASE + 0x3c0)
+#define	ASMU_AB1_U71WAITCTRL		(ASMU_S0_BASE + 0x3c4)
+#define	ASMU_AB1_U72WAITCTRL		(ASMU_S0_BASE + 0x3c8)
+#define	ASMU_AB1_IIC2WAITCTRL		(ASMU_S0_BASE + 0x3cc)
+#define	ASMU_AB1_IICWAITCTRL		(ASMU_S0_BASE + 0x3d0)
+#define	ASMU_AB1_U70READCTRL		(ASMU_S0_BASE + 0x3d4)
+#define	ASMU_AB1_U71READCTRL		(ASMU_S0_BASE + 0x3d8)
+#define	ASMU_AB1_U72READCTRL		(ASMU_S0_BASE + 0x3dc)
+#define	ASMU_AB1_IIC2READCTRL		(ASMU_S0_BASE + 0x3e0)
+#define	ASMU_AB1_IICREADCTRL		(ASMU_S0_BASE + 0x3e4)
+#define	ASMU_AB1_SDIBWAITCTRL		(ASMU_S0_BASE + 0x3e8)
+#define	ASMU_AB1_SDIBREADCTRL		(ASMU_S0_BASE + 0x3ec)
+#define	ASMU_AB1_SDICWAITCTRL		(ASMU_S0_BASE + 0x3f0)
+#define	ASMU_AB1_SDICREADCTRL		(ASMU_S0_BASE + 0x3f4)
+
+#define	ASMU_LOG2SW_ACTRLEN		(ASMU_S0_BASE + 0x504)
+#define	ASMU_LOG2SW_ACTRL		(ASMU_S0_BASE + 0x508)
+#define	ASMU_L3_POWERSW_BUZ		(ASMU_S0_BASE + 0x50c)
+#define	ASMU_LOG3SW_ACTRLEN		(ASMU_S0_BASE + 0x510)
+#define	ASMU_LOG3SW_ACTRL		(ASMU_S0_BASE + 0x514)
+
+#define	ASMU_RESETREQ3			(ASMU_S0_BASE + 0x83c)
+#define	ASMU_RESETREQ3ENA		(ASMU_S0_BASE + 0x840)
+#define	ASMU_APBCLKCTRL2		(ASMU_S0_BASE + 0x848)
+#define	ASMU_GCLKCTRL4			(ASMU_S0_BASE + 0x84c)
+#define	ASMU_GCLKCTRL4ENA		(ASMU_S0_BASE + 0x850)
+#define	ASMU_AUTO_FRQ_MASK3		(ASMU_S0_BASE + 0x860)
+#define	ASMU_DFS_FIFOMODE		(ASMU_S0_BASE + 0x864)
+#define	ASMU_DFS_FIFO_REQMASK		(ASMU_S0_BASE + 0x868)
+#define	ASMU_LCD_FIFOTHRESHOLD		(ASMU_S0_BASE + 0x86c)
+#define	ASMU_CLKCTRL1			(ASMU_S0_BASE + 0x88c)
+
+#define	ASMU_AB1_SDIAWAITCTRL		(ASMU_S0_BASE + 0x890)
+#define	ASMU_AB1_SDIAREADCTRL		(ASMU_S0_BASE + 0x894)
+
+#define	ASMU_SEL_BIGWEST		(ASMU_S0_BASE + 0x8B8)
+
+/* MEMC */
+#define	MEMC_SYSCACHE_BASE		(0xc00a0000)
+#define	MEMC_CACHE_MODE			(MEMC_SYSCACHE_BASE + 0x000)
+#define	MEMC_DEGFUN			(MEMC_SYSCACHE_BASE + 0x008)
+
+#define	MEMC_MRS_BASE			(0xc00a1000)
+#define	MEMC_REQSCH			(MEMC_MRS_BASE + 0x000)
+
+#define	MEMC_BASE			(0xc00a2000)
+#define	MEMC_DDR_CONFIGF		(MEMC_BASE + 0x000)
+#define	MEMC_DDR_CONFIGA1		(MEMC_BASE + 0x004)
+#define	MEMC_DDR_CONFIGA2		(MEMC_BASE + 0x008)
+#define	MEMC_DDR_CONFIGC1		(MEMC_BASE + 0x00c)
+#define	MEMC_DDR_CONFIGC2		(MEMC_BASE + 0x010)
+#define	MEMC_DDR_CONFIGR1		(MEMC_BASE + 0x014)
+#define	MEMC_DDR_CONFIGR2		(MEMC_BASE + 0x018)
+#define	MEMC_DDR_CONFIGR3		(MEMC_BASE + 0x01c)
+#define	MEMC_DDR_CONFIGT1		(MEMC_BASE + 0x020)
+#define	MEMC_DDR_CONFIGT2		(MEMC_BASE + 0x024)
+#define	MEMC_DDR_CONFIGT3		(MEMC_BASE + 0x028)
+#define	MEMC_DDR_STATE8			(MEMC_BASE + 0x02c)
+
+
+/* CHG */
+#define	CHG_BASE			(0xc0140000)
+
+#define	CHG_BOOT_MODE			(CHG_BASE + 0x000)
+#define	CHG_L1_HOLD			(CHG_BASE + 0x004)
+#define	CHG_LSI_REVISION		(CHG_BASE + 0x010)
+
+#define	CHG_CTRL_SDINT			(CHG_BASE + 0x104)
+#define	CHG_CTRL_AB0_BOOT		(CHG_BASE + 0x108)
+#define	CHG_CTRL_OSC			(CHG_BASE + 0x110)
+
+#define	CHG_PINSEL_G00			(CHG_BASE + 0x200)
+#define	CHG_PINSEL_G16			(CHG_BASE + 0x204)
+#define	CHG_PINSEL_G32			(CHG_BASE + 0x208)
+#define	CHG_PINSEL_G48			(CHG_BASE + 0x20C)
+#define	CHG_PINSEL_G64			(CHG_BASE + 0x210)
+#define	CHG_PINSEL_G80			(CHG_BASE + 0x214)
+#define	CHG_PINSEL_G96			(CHG_BASE + 0x218)
+#define	CHG_PINSEL_G112			(CHG_BASE + 0x21C)
+
+#define	CHG_PINSEL_SP0			(CHG_BASE + 0x280)
+#define	CHG_PINSEL_DTV			(CHG_BASE + 0x284)
+#define	CHG_PINSEL_SD0			(CHG_BASE + 0x288)
+#define	CHG_PINSEL_SD1			(CHG_BASE + 0x28C)
+#define	CHG_PINSEL_IIC2			(CHG_BASE + 0x290)
+#define	CHG_PINSEL_REFCLKO		(CHG_BASE + 0x294)
+
+#define	CHG_PULL_G00			(CHG_BASE + 0x300)
+#define	CHG_PULL_G08			(CHG_BASE + 0x304)
+#define	CHG_PULL_G16			(CHG_BASE + 0x308)
+#define	CHG_PULL_G24			(CHG_BASE + 0x30C)
+#define	CHG_PULL_G32			(CHG_BASE + 0x310)
+#define	CHG_PULL_G40			(CHG_BASE + 0x314)
+#define	CHG_PULL_G48			(CHG_BASE + 0x318)
+#define	CHG_PULL_G56			(CHG_BASE + 0x31C)
+#define	CHG_PULL_G64			(CHG_BASE + 0x320)
+#define	CHG_PULL_G72			(CHG_BASE + 0x324)
+#define	CHG_PULL_G80			(CHG_BASE + 0x328)
+#define	CHG_PULL_G88			(CHG_BASE + 0x32C)
+#define	CHG_PULL_G96			(CHG_BASE + 0x330)
+#define	CHG_PULL_G104			(CHG_BASE + 0x334)
+#define	CHG_PULL_G112			(CHG_BASE + 0x338)
+#define	CHG_PULL_G120			(CHG_BASE + 0x33C)
+
+#define	CHG_PULL0			(CHG_BASE + 0x380)
+#define	CHG_PULL1			(CHG_BASE + 0x384)
+#define	CHG_PULL2			(CHG_BASE + 0x388)
+#define	CHG_PULL3			(CHG_BASE + 0x38C)
+
+#define	CHG_DRIVE0			(CHG_BASE + 0x400)
+#define	CHG_DRIVE1			(CHG_BASE + 0x404)
+#define	CHG_DRIVE2			(CHG_BASE + 0x408)
+
+#define	CHG_RST_CTRL			(CHG_BASE + 0x584)
+
+/* AB0 */
+#define	AB0_BASE			(0x2fff0000)
+#define	AB0_FLASHCOMSET			(AB0_BASE + 0x000)
+#define	AB0_FLASHCOMLATCH		(AB0_BASE + 0x004)
+
+#define	AB0_FLASHCOMADD0		(AB0_BASE + 0x010)
+#define	AB0_FLASHCOMDATA0		(AB0_BASE + 0x014)
+#define	AB0_FLASHCOMADD1		(AB0_BASE + 0x018)
+#define	AB0_FLASHCOMDATA1		(AB0_BASE + 0x01c)
+
+#define	AB0_FLASHCLKCTRL		(AB0_BASE + 0x080)
+#define	AB0_FLA_RCLK_DLY		(AB0_BASE + 0x084)
+
+#define	AB0_WAIT_STATUS			(AB0_BASE + 0x090)
+
+#define	AB0_CS0BASEADD			(AB0_BASE + 0x100)
+#define	AB0_CS0BITCOMP			(AB0_BASE + 0x104)
+#define	AB0_CS1BASEADD			(AB0_BASE + 0x110)
+#define	AB0_CS1BITCOMP			(AB0_BASE + 0x114)
+#define	AB0_CS2BASEADD			(AB0_BASE + 0x120)
+#define	AB0_CS2BITCOMP			(AB0_BASE + 0x124)
+#define	AB0_CS3BASEADD			(AB0_BASE + 0x130)
+#define	AB0_CS3BITCOMP			(AB0_BASE + 0x134)
+#define	AB0_CS4BASEADD			(AB0_BASE + 0x140)
+#define	AB0_CS4BITCOMP			(AB0_BASE + 0x144)
+#define	AB0_CS5BASEADD			(AB0_BASE + 0x150)
+#define	AB0_CS5BITCOMP			(AB0_BASE + 0x154)
+
+#define	AB0_CS0WAITCTRL			(AB0_BASE + 0x200)
+#define	AB0_CS0WAITCTRL_W		(AB0_BASE + 0x204)
+#define	AB0_CS0READCTRL			(AB0_BASE + 0x208)
+#define	AB0_CS0WAIT_MASK		(AB0_BASE + 0x20c)
+#define	AB0_CS0CONTROL			(AB0_BASE + 0x210)
+
+#define	AB0_CS0FLASHRCR			(AB0_BASE + 0x214)
+#define	AB0_CS0FLASHWCR			(AB0_BASE + 0x218)
+
+#define	AB0_CS1WAITCTRL			(AB0_BASE + 0x220)
+#define	AB0_CS1WAITCTRL_W		(AB0_BASE + 0x224)
+#define	AB0_CS1READCTRL			(AB0_BASE + 0x228)
+#define	AB0_CS1WAIT_MASK		(AB0_BASE + 0x22c)
+#define	AB0_CS1CONTROL			(AB0_BASE + 0x230)
+
+#define	AB0_CS1FLASHRCR			(AB0_BASE + 0x234)
+#define	AB0_CS1FLASHWCR			(AB0_BASE + 0x238)
+
+#define	AB0_CS2WAITCTRL			(AB0_BASE + 0x240)
+#define	AB0_CS2WAITCTRL_W		(AB0_BASE + 0x244)
+#define	AB0_CS2READCTRL			(AB0_BASE + 0x248)
+#define	AB0_CS2WAIT_MASK		(AB0_BASE + 0x24c)
+#define	AB0_CS2CONTROL			(AB0_BASE + 0x250)
+
+#define	AB0_CS2FLASHRCR			(AB0_BASE + 0x254)
+#define	AB0_CS2FLASHWCR			(AB0_BASE + 0x258)
+
+#define	AB0_CS3WAITCTRL			(AB0_BASE + 0x260)
+#define	AB0_CS3WAITCTRL_W		(AB0_BASE + 0x264)
+#define	AB0_CS3READCTRL			(AB0_BASE + 0x268)
+#define	AB0_CS3WAIT_MASK		(AB0_BASE + 0x26c)
+#define	AB0_CS3CONTROL			(AB0_BASE + 0x270)
+
+#define	AB0_CS3FLASHRCR			(AB0_BASE + 0x274)
+#define	AB0_CS3FLASHWCR			(AB0_BASE + 0x278)
+
+#define	AB0_CS4WAITCTRL			(AB0_BASE + 0x280)
+#define	AB0_CS4WAITCTRL_W		(AB0_BASE + 0x284)
+#define	AB0_CS4READCTRL			(AB0_BASE + 0x288)
+#define	AB0_CS4WAIT_MASK		(AB0_BASE + 0x28c)
+#define	AB0_CS4CONTROL			(AB0_BASE + 0x290)
+
+#define	AB0_CS4FLASHRCR			(AB0_BASE + 0x294)
+#define	AB0_CS4FLASHWCR			(AB0_BASE + 0x298)
+
+#define	AB0_CS5WAITCTRL			(AB0_BASE + 0x2a0)
+#define	AB0_CS5WAITCTRL_W		(AB0_BASE + 0x2a4)
+#define	AB0_CS5READCTRL			(AB0_BASE + 0x2a8)
+#define	AB0_CS5WAIT_MASK		(AB0_BASE + 0x2ac)
+#define	AB0_CS5CONTROL			(AB0_BASE + 0x2b0)
+
+#define	AB0_CS5FLASHRCR			(AB0_BASE + 0x2b4)
+#define	AB0_CS5FLASHWCR			(AB0_BASE + 0x2b8)
+
+
+/* GIO */
+#define	GIO_BASE			(0xc0050000)
+/* GPIO 00-31 */
+#define	GIO_E1_L			(GIO_BASE + 0x000)
+#define	GIO_E0_L			(GIO_BASE + 0x004)
+#define	GIO_OL_L			(GIO_BASE + 0x008)
+#define	GIO_OH_L			(GIO_BASE + 0x00c)
+#define	GIO_I_L				(GIO_BASE + 0x010)
+#define	GIO_IIA_L			(GIO_BASE + 0x014)
+#define	GIO_IEN_L			(GIO_BASE + 0x018)
+#define	GIO_IDS_L			(GIO_BASE + 0x01c)
+#define	GIO_RAW_L			(GIO_BASE + 0x020)
+#define	GIO_MST_L			(GIO_BASE + 0x024)
+#define	GIO_IIR_L			(GIO_BASE + 0x028)
+#define	GIO_GSW_L			(GIO_BASE + 0x03c)
+#define	GIO_IDT0_L			(GIO_BASE + 0x100)
+#define	GIO_IDT1_L			(GIO_BASE + 0x104)
+#define	GIO_IDT2_L			(GIO_BASE + 0x108)
+#define	GIO_IDT3_L			(GIO_BASE + 0x10c)
+/* GPIO 32-63 */
+#define	GIO_E1_H			(GIO_BASE + 0x040)
+#define	GIO_E0_H			(GIO_BASE + 0x044)
+#define	GIO_OL_H			(GIO_BASE + 0x048)
+#define	GIO_OH_H			(GIO_BASE + 0x04c)
+#define	GIO_I_H				(GIO_BASE + 0x050)
+#define	GIO_IIA_H			(GIO_BASE + 0x054)
+#define	GIO_IEN_H			(GIO_BASE + 0x058)
+#define	GIO_IDS_H			(GIO_BASE + 0x05c)
+#define	GIO_RAW_H			(GIO_BASE + 0x060)
+#define	GIO_MST_H			(GIO_BASE + 0x064)
+#define	GIO_IIR_H			(GIO_BASE + 0x068)
+#define	GIO_GSW_H			(GIO_BASE + 0x07c)
+#define	GIO_IDT0_H			(GIO_BASE + 0x140)
+#define	GIO_IDT1_H			(GIO_BASE + 0x144)
+#define	GIO_IDT2_H			(GIO_BASE + 0x148)
+#define	GIO_IDT3_H			(GIO_BASE + 0x14c)
+/* GPIO 64-95 */
+#define GIO_E1_HH			(GIO_BASE + 0x080)
+#define GIO_E0_HH			(GIO_BASE + 0x084)
+#define GIO_OL_HH			(GIO_BASE + 0x088)
+#define GIO_OH_HH			(GIO_BASE + 0x08C)
+#define GIO_I_HH			(GIO_BASE + 0x090)
+#define GIO_IIA_HH			(GIO_BASE + 0x094)
+#define GIO_IEN_HH			(GIO_BASE + 0x098)
+#define GIO_IDS_HH			(GIO_BASE + 0x09C)
+#define GIO_RAW_HH			(GIO_BASE + 0x0A0)
+#define GIO_MST_HH			(GIO_BASE + 0x0A4)
+#define GIO_IIR_HH			(GIO_BASE + 0x0A8)
+#define GIO_GSW_HH			(GIO_BASE + 0x0BC)
+#define GIO_IDT0_HH			(GIO_BASE + 0x180)
+#define GIO_IDT1_HH			(GIO_BASE + 0x184)
+#define GIO_IDT2_HH			(GIO_BASE + 0x188)
+#define GIO_IDT3_HH			(GIO_BASE + 0x18C)
+/* GPIO 96-127 */
+#define GIO_E1_HHH			(GIO_BASE + 0x200)
+#define GIO_E0_HHH			(GIO_BASE + 0x204)
+#define GIO_OL_HHH			(GIO_BASE + 0x208)
+#define GIO_OH_HHH			(GIO_BASE + 0x20C)
+#define GIO_I_HHH			(GIO_BASE + 0x210)
+#define GIO_IIA_HHH			(GIO_BASE + 0x214)
+#define GIO_IEN_HHH			(GIO_BASE + 0x218)
+#define GIO_IDS_HHH			(GIO_BASE + 0x21C)
+#define GIO_RAW_HHH			(GIO_BASE + 0x220)
+#define GIO_MST_HHH			(GIO_BASE + 0x224)
+#define GIO_IIR_HHH			(GIO_BASE + 0x228)
+#define GIO_GSW_HHH			(GIO_BASE + 0x23C)
+#define GIO_IDT0_HHH			(GIO_BASE + 0x300)
+#define GIO_IDT1_HHH			(GIO_BASE + 0x304)
+#define GIO_IDT2_HHH			(GIO_BASE + 0x308)
+#define GIO_IDT3_HHH			(GIO_BASE + 0x30C)
+
+
+/* AINT */
+#define	AINT_BASE			(0xcc01e000)
+#define	AINT_IT0_IENS0			(AINT_BASE + 0x200)
+#define	AINT_IT0_IENS1			(AINT_BASE + 0x204)
+#define	AINT_IT0_IENS2			(AINT_BASE + 0x208)
+
+
+/* SRC */
+#define	SRC_BASE			(0xa00f0000)
+#define	SRC_MODE			(SRC_BASE + 0x000)
+
+
+/* AAXI */
+#define	AXI_BASE			(0xc00f0000)
+#define	AXI_LAZY_LOCK			(AXI_BASE + 0x108)
+
+
+/* UART */
+#define UART0_BASE			(0x50000000)
+#define UART0_FCR			(UART0_BASE + 0x0c)
+
+#if defined(CONFIG_EM1_BOARD_DKIT)
+/* SMSC EEPROM access */
+#define	SMSC9118_BASE			(0x20000000)
+#define E2P_CMD 			(SMSC9118_BASE + 0xB0)
+#define E2P_DATA		  	(SMSC9118_BASE + 0xB4)
+#endif
+#endif /* _REG_H */

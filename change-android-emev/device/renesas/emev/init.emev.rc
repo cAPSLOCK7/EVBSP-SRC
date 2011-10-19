@@ -1,0 +1,11 @@
+on boot
+    setprop net.dns1 192.168.0.1
+    setprop ro.radio.use-ppp no
+    setprop ro.radio.noril yes
+    setprop ro.showcursor 1
+    chown system system /sys/class/leds/led1/brightness
+    chown system system /sys/class/leds/led2/brightness
+
+service emev-setup /system/etc/init.emev.sh
+    oneshot
+
